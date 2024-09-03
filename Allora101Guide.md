@@ -6,7 +6,7 @@
 ## OPTION 1: One-Click Installation Script
 Run Command:
 ```bash
-wget https://raw.githubusercontent.com/0xtnpxsgt/Allora-Comprehensive-Guide/main/alloraoneclickinstall.sh && chmod +x alloraoneclickinstall.sh && ./alloraoneclickinstall.sh
+wget https://raw.githubusercontent.com/anibtcsol/allora1/blob/main/alloraoneclickinstall.sh && chmod +x alloraoneclickinstall.sh && ./alloraoneclickinstall.sh
 ```
 
 ------------------------------------------------------------------------------------
