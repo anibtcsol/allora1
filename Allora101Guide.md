@@ -138,7 +138,7 @@ chmod +x init.config
 
 ## Step 4: Run Script
 ```bash
-wget https://raw.githubusercontent.com/0xtnpxsgt/Allora-Comprehensive-Guide/main/upgrade-model.sh && chmod +x upgrade-model.sh && ./upgrade-model.sh
+wget https://raw.githubusercontent.com/anibtcsol/allora1/blob/main/upgrade-model.sh && chmod +x upgrade-model.sh && ./upgrade-model.sh
 ```
 
 -------------------------------------------------------------
