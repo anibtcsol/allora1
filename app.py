@@ -7,27 +7,24 @@ from flask import Flask, Response, json
 
 app = Flask(__name__)
 
-# Define the BiRNN model with the correct architecture
 class BiRNNModel(nn.Module):
     def __init__(self, input_size, hidden_layer_size, output_size, num_layers, dropout):
         super(BiRNNModel, self).__init__()
         self.hidden_layer_size = hidden_layer_size
         self.num_layers = num_layers
         self.rnn = nn.RNN(input_size, hidden_layer_size, num_layers=num_layers, dropout=dropout, batch_first=True, bidirectional=True)
-        self.linear = nn.Linear(hidden_layer_size * 2, output_size)  # *2 because of bidirectional
+        self.linear = nn.Linear(hidden_layer_size * 2, output_size)
 
     def forward(self, input_seq):
-        h_0 = torch.zeros(self.num_layers * 2, input_seq.size(0), self.hidden_layer_size)  # *2 for bidirection
+        h_0 = torch.zeros(self.num_layers * 2, input_seq.size(0), self.hidden_layer_size)
         rnn_out, _ = self.rnn(input_seq, h_0)
         predictions = self.linear(rnn_out[:, -1])
         return predictions
 
-# Initialize the model with the same architecture as during training
 model = BiRNNModel(input_size=1, hidden_layer_size=115, output_size=1, num_layers=2, dropout=0.3)
-model.load_state_dict(torch.load("birnn_model_optimized.pth", weights_only=True))
+model.load_state_dict(torch.load("birnn_model_optimized.pth", map_location=torch.device('cpu')), strict=False)
 model.eval()
 
-# Function to fetch historical data from Binance
 def get_binance_url(symbol="ETHUSDT", interval="1m", limit=1000):
     return f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
 
