@@ -7,21 +7,21 @@ from torch.utils.data import DataLoader, TensorDataset
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import joblib
 
-# Define the BiRNN model with BatchNorm
-class BiRNNModel(nn.Module):
+# Define the GRU model with BatchNorm
+class GRUModel(nn.Module):
     def __init__(self, input_size, hidden_layer_size, output_size, num_layers, dropout):
-        super(BiRNNModel, self).__init__()
+        super(GRUModel, self).__init__()
         self.hidden_layer_size = hidden_layer_size
         self.num_layers = num_layers
-        self.rnn = nn.RNN(input_size, hidden_layer_size, num_layers=num_layers, dropout=dropout, batch_first=True, bidirectional=True)
+        self.gru = nn.GRU(input_size, hidden_layer_size, num_layers=num_layers, dropout=dropout, batch_first=True, bidirectional=True)
         self.batch_norm = nn.BatchNorm1d(hidden_layer_size * 2)
         self.linear = nn.Linear(hidden_layer_size * 2, output_size)  # *2 because of bidirectional
 
     def forward(self, input_seq):
         h_0 = torch.zeros(self.num_layers * 2, input_seq.size(0), self.hidden_layer_size).to(input_seq.device)  # *2 for bidirection
-        rnn_out, _ = self.rnn(input_seq, h_0)
-        rnn_out = self.batch_norm(rnn_out[:, -1])
-        predictions = self.linear(rnn_out)
+        gru_out, _ = self.gru(input_seq, h_0)
+        gru_out = self.batch_norm(gru_out[:, -1])
+        predictions = self.linear(gru_out)
         return predictions
 
 # Training process with Gradient Clipping and Early Stopping
@@ -59,14 +59,14 @@ def train_model(model, train_loader, val_loader, epochs=100, initial_lr=0.0005, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             trials = 0
-            torch.save(model.state_dict(), "best_birnn_model.pth")  # Save the best model
+            torch.save(model.state_dict(), "best_gru_model.pth")  # Save the best model
         else:
             trials += 1
             if trials >= patience:
                 print(f"Early stopping on epoch {epoch+1}")
                 break
 
-    print("Training complete. Best model saved as best_birnn_model.pth")
+    print("Training complete. Best model saved as best_gru_model.pth")
 
 # Validation function
 def validate_model(model, val_loader, criterion, device):
@@ -89,8 +89,8 @@ def predict(model, seq, scaler, device="cpu"):
         return scaler.inverse_transform(prediction)
 
 if __name__ == "__main__":
-    # Define the model with adjusted parameters
-    model = BiRNNModel(input_size=1, hidden_layer_size=300, output_size=1, num_layers=3, dropout=0.3)
+    # Define the model with GRU
+    model = GRUModel(input_size=1, hidden_layer_size=300, output_size=1, num_layers=3, dropout=0.3)
 
     # Symbols to train on
     symbols = ['BNBUSDT', 'BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT']
