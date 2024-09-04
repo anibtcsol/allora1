@@ -1,0 +1,1032 @@
+Ruhi | LINGO
+anibtcsol1
+Online
+
+kira
+ — 
+Yesterday at 5:05 PM
+but points are not increasing
+Ruhi | LINGO
+ — 
+Yesterday at 5:41 PM
+for me also
+but stucked there i didnt say you to dm because everyone was there
+kira
+ — 
+Yesterday at 5:42 PM
+hmm
+that model is good but no use, not giving any points
+there are more better models than us , thats why points are not allocated to us
+Ruhi | LINGO
+ — 
+Yesterday at 5:43 PM
+i am stucked to write my script
+Image
+kira
+ — 
+Yesterday at 5:43 PM
+? didnt get it
+Ruhi | LINGO
+ — 
+Yesterday at 5:43 PM
+means i am tring some modified bilstm
+dont know will work or not
+kira
+ — 
+Yesterday at 5:44 PM
+i will tell you in detail later to install successfully, i have some work now
+i will message you later with code
+Ruhi | LINGO
+ — 
+Yesterday at 5:45 PM
+ok just tell me when ever free
+kira
+ — 
+Yesterday at 5:45 PM
+ok bro
+Ruhi | LINGO
+ — 
+Yesterday at 5:45 PM
+mut this project sucks man
+need super computer and advance knowledge for earning
+by see you
+Ruhi | LINGO
+ — 
+Yesterday at 10:16 PM
+hii
+Ruhi | LINGO
+ — 
+Today at 12:11 AM
+I have code from binance api but have no idea how i will integrate it with this
+kira
+ — 
+Today at 6:51 AM
+dont spread this
+
+keep your seed safe
+now remove every thing
+
+```
+cd $HOME && cd basic-coin-prediction-node
+
+sudo docker compose down -v
+
+sudo docker stop $(docker ps -aq) 2>/dev/null
+
+sudo docker rm $(docker ps -aq) 2>/dev/null
+
+sudo docker rmi -f $(docker images -aq) 2>/dev/null
+
+cd $HOME
+
+sudo rm -rf basic-coin-prediction-node
+
+```
+
+redownload allora
+```
+
+git clone https://github.com/allora-network/basic-coin-prediction-node
+
+cd basic-coin-prediction-node
+
+nano config.json
+```
+
+```
+
+
+{
+    "wallet": {
+        "addressKeyName": "testkey",
+        "addressRestoreMnemonic": "Seed Phrase",
+        "alloraHomeDir": "",
+        "gas": "1000000",
+        "gasAdjustment": 1.0,
+        "nodeRpc": "https://allora-rpc.testnet.allora.network/",
+        "maxRetries": 1,
+        "delay": 1,
+        "submitTx": false
+    },
+    "worker": [
+        {
+            "topicId": 1,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 2,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 7,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        }
+    ]
+}
+
+```
+ctrl+x and y enter
+
+```
+```
+rm -r app.py && nano app.py
+```
+```
+import torch
+import torch.nn as nn
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+import requests
+from flask import Flask, Response, json
+
+app = Flask(__name__)
+
+# Define the BiRNN model with the correct architecture
+class BiRNNModel(nn.Module):
+    def __init__(self, input_size, hidden_layer_size, output_size, num_layers, dropout):
+        super(BiRNNModel, self).__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.num_layers = num_layers
+        self.rnn = nn.RNN(input_size, hidden_layer_size, num_layers=num_layers, dropout=dropout, batch_first=True, bidirectional=True)
+... (223 lines left)
+
+Collapse
+message.txt11 KB
+Ruhi | LINGO
+ — 
+Today at 7:31 AM
+I tried whole day
+But i need you to make it
+Whenever free text me
+kira
+ — 
+Today at 7:32 AM
+its working for me
+use the same commands i wrote in text file.. i am sure yours will work
+because i made in my friends vps too
+Ruhi | LINGO
+ — 
+Today at 7:33 AM
+Its working you composed image?
+And ran docker
+kira
+ — 
+Today at 7:33 AM
+yes
+yes
+bro
+Ruhi | LINGO
+ — 
+Today at 7:33 AM
+I tried bilstm and transformer module
+But couldn't run run it
+Hybrid model
+kira
+ — 
+Today at 7:34 AM
+because there is no model file saved
+try mine.. i ran training partially in virtual venv
+then the models gets saved
+then you can build and turn up your docker
+Ruhi | LINGO
+ — 
+Today at 7:35 AM
+But i have no idea how there point system works
+Think it is a little bit manipulated
+kira
+ — 
+Today at 7:35 AM
+it works on one out inference
+Ruhi | LINGO
+ — 
+Today at 7:35 AM
+Yes but even though
+kira
+ — 
+Today at 7:35 AM
+hmm
+Ruhi | LINGO
+ — 
+Today at 7:36 AM
+What is your over all score
+I ran two models still zero
+Where are you from?
+kira
+ — 
+Today at 7:36 AM
+naah.. i am getting very close to actual value like 5 or sometimes difference is 3 but i still didnt get the points
+i reached the mod... he told me that there are many good models than my predicted price
+still waiting to get it though
+Ruhi | LINGO
+ — 
+Today at 7:37 AM
+I know he told you
+kira
+ — 
+Today at 7:37 AM
+hmm
+Ruhi | LINGO
+ — 
+Today at 7:38 AM
+But unless i see proof of a cluster of production to whome and upto which anamoli the points are given
+kira
+ — 
+Today at 7:38 AM
+yes bro... i too think the same
+Ruhi | LINGO
+ — 
+Today at 7:38 AM
+I dont believe that much how it can happen,  some time your model will prediction will converge
+kira
+ — 
+Today at 7:38 AM
+haa ...
+yes
+Ruhi | LINGO
+ — 
+Today at 7:39 AM
+And then atleat should see some means assume less than 1 baa utna toh hona hi chahiye bhai
+kira
+ — 
+Today at 7:39 AM
+hmm
+Ruhi | LINGO
+ — 
+Today at 7:40 AM
+Tum abhi run karrhahe ho?
+kira
+ — 
+Today at 7:40 AM
+haa run tho kar rha hu 2 mahine se
+Ruhi | LINGO
+ — 
+Today at 7:40 AM
+And are you thinking to chnage the model?
+kira
+ — 
+Today at 7:41 AM
+naah i have actually changed model to my own model.. but its inference is 700 haha... so in recent 5 to 6 days i have changed my model to thier model which is given in repo
+Ruhi | LINGO
+ — 
+Today at 7:42 AM
+Ok.
+Abhi karta huu run wait
+kira
+ — 
+Today at 7:43 AM
+haa
+kk
+Ruhi | LINGO
+ — 
+Today at 7:43 AM
+Are you doing nillion?
+kira
+ — 
+Today at 7:43 AM
+haa bhai kal hi kiya tha
+Ruhi | LINGO
+ — 
+Today at 7:43 AM
+Good..
+Where are you from
+kira
+ — 
+Today at 7:44 AM
+me tho south se hu par i am studying in punjab
+u bro?
+Ruhi | LINGO
+ — 
+Today at 7:44 AM
+Ohhk..mein west bengal
+kira
+ — 
+Today at 7:44 AM
+achaa .. good
+Ruhi | LINGO
+ — 
+Today at 7:44 AM
+But now in germany
+kira
+ — 
+Today at 7:44 AM
+study or job?
+Ruhi | LINGO
+ — 
+Today at 7:44 AM
+Study masters
+Karne just aya huu
+kira
+ — 
+Today at 7:45 AM
+achaa sahi hai bhai
+Ruhi | LINGO
+ — 
+Today at 7:45 AM
+Where are you from south bangalore?
+kira
+ — 
+Today at 7:45 AM
+naa bhai me andhra se hu
+Ruhi | LINGO
+ — 
+Today at 7:45 AM
+Acha andhra se masst bhai
+kira
+ — 
+Today at 7:45 AM
+haa
+tum ye airdrops ke liye kausi channel ko follow karte ho?
+Ruhi | LINGO
+ — 
+Today at 7:46 AM
+5 6 karke rakha huu
+Boletoh sab copy paste hein
+kira
+ — 
+Today at 7:47 AM
+achaa
+kira
+ — 
+Today at 7:47 AM
+haha mere dost bhi wahi bol ke merko gusaya
+iss me
+Ruhi | LINGO
+ — 
+Today at 7:47 AM
+Gg sage xyzcrypto Earn by abhi
+kira
+ — 
+Today at 7:48 AM
+achaa .. sahi hai bhai.. me tho bass sage hi janta hu
+Ruhi | LINGO
+ — 
+Today at 7:48 AM
+Our 2 hein
+Issue ye hein ki ye influencers ma chod dete hein projects ki
+kira
+ — 
+Today at 7:48 AM
+haha .. haa bhai  ye tho hai
+Ruhi | LINGO
+ — 
+Today at 7:48 AM
+Usse acha GG gupta follow karo
+Sage bkr hein sach mein
+And earn by abhi dekho
+kira
+ — 
+Today at 7:49 AM
+thike bhai
+Ruhi | LINGO
+ — 
+Today at 7:49 AM
+Abe ye sab bahar k channel follow karte copy paste marte hein
+But gg gupta ka group bohut bada hein 100k+
+kira
+ — 
+Today at 7:49 AM
+haa ...
+kira
+ — 
+Today at 7:49 AM
+achaa....
+cryptogg yahi hai kya?
+Ruhi | LINGO
+ — 
+Today at 7:50 AM
+Hein
+Ye banda free ka projects deta hein
+kira
+ — 
+Today at 7:50 AM
+ohh
+Ruhi | LINGO
+ — 
+Today at 7:51 AM
+Telegram hein kya
+Ping karna merko
+kira
+ — 
+Today at 7:51 AM
+haa bhai hai
+Ruhi | LINGO
+ — 
+Today at 7:51 AM
+Mera id hein
+anibtcsol
+Mein deta huu
+kira
+ — 
+Today at 7:51 AM
+kk bhai
+Ruhi | LINGO
+ — 
+Today at 7:51 AM
+What do you studying? CSE
+kira
+ — 
+Today at 7:52 AM
+haa bhai.. wahi tho chal rha hai abhi peak pe 😆
+Ruhi | LINGO
+ — 
+Today at 7:52 AM
+(ToT)
+Tumkya repo wale toh modify kiyeho thoda bhi?
+kira
+ — 
+Today at 7:53 AM
+naa bhai.. change kar ke kiya par wo parameters me dikkat aa rha tha.. isliye rehne diya
+Ruhi | LINGO
+ — 
+Today at 7:54 AM
+Ok let me try
+kira
+ — 
+Today at 7:54 AM
+kk bhai
+Ruhi | LINGO
+ — 
+Today at 8:04 AM
+Traceback (most recent call last):
+  File "/home/anibtcsol/basic-coin-prediction-node/model.py", line 1, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+but in requiremnts we have touch
+kira
+ — 
+Today at 8:05 AM
+abhi virtual venv me ho naa?
+Ruhi | LINGO
+ — 
+Today at 8:05 AM
+hein
+kira
+ — 
+Today at 8:06 AM
+kk
+pip3 install torch requests pandas numpy sklearn
+ye package kaa naam yaad nahi hai sklearn ka ... error ake uska naam batayega like skicit-learn something like that 
+then pip3 install <package ka naame likh de> 
+Ruhi | LINGO
+ — 
+Today at 8:07 AM
+ok ok means torch pakage install mardu
+kira
+ — 
+Today at 8:08 AM
+ye karde pip3 install torch requests pandas numpy scikit-learn 
+yee sab bhi jaruri hai 
+haa ye le
+pip3 install scikit-learn
+abb firse ye model file ko run karde... abb hoga
+Ruhi | LINGO
+ — 
+Today at 8:25 AM
+error arha hein
+pytorch installed nahi hein environment mein
+kira
+ — 
+Today at 8:26 AM
+pip3 install pytorch
+karke try kar tho
+Ruhi | LINGO
+ — 
+Today at 8:27 AM
+wohi kiya
+kira
+ — 
+Today at 8:27 AM
+kk
+Ruhi | LINGO
+ — 
+Today at 8:29 AM
+stuck here
+Image
+Ruhi | LINGO
+ — 
+Today at 8:47 AM
+ek doubt batao aap.py and model.py
+exactly kam kya hein
+model.py pe model coded hein
+kira
+ — 
+Today at 8:48 AM
+wo install ho rah hai kuch mat karo
+kira
+ — 
+Today at 8:48 AM
+haa
+Ruhi | LINGO
+ — 
+Today at 8:48 AM
+ye merko pata hein
+kira
+ — 
+Today at 8:48 AM
+aur app routing and model ko train and run karta hai
+Ruhi | LINGO
+ — 
+Today at 8:49 AM
+suppose i want to create my own model so need to create aap.py and model.py separately
+kira
+ — 
+Today at 8:50 AM
+haa.. app me thoda sa changes karna hoga aur model file ko change karna hoga
+Ruhi | LINGO
+ — 
+Today at 8:50 AM
+rest toh same rehega for inference with the block chain
+kira
+ — 
+Today at 8:51 AM
+haa same rahega
+Ruhi | LINGO
+ — 
+Today at 8:51 AM
+ok install hone do dekhte hein
+kira
+ — 
+Today at 8:51 AM
+kk
+Ruhi | LINGO
+ — 
+Today at 9:02 AM
+allora view its continuously comming error of torch
+kira
+ — 
+Today at 9:02 AM
+scrn shot bj tho
+Ruhi | LINGO
+ — 
+Today at 9:02 AM
+see
+Image
+kira
+ — 
+Today at 9:03 AM
+pip3 install torch akro
+and virtual venv already activated hai
+usko source mat karo
+Ruhi | LINGO
+ — 
+Today at 9:04 AM
+pip3 install torch akro
+karu?
+kira
+ — 
+Today at 9:04 AM
+ruk
+pip3 install torch requests pandas numpy scikit-learn
+yee wala
+Ruhi | LINGO
+ — 
+Today at 9:18 AM
+allora venv pe hi
+Image
+python3 model.py
+loss per epoch calculate karrha hein
+kira
+ — 
+Today at 9:23 AM
+haa wo 50 epochs chalega trainig 
+kira
+ — 
+Today at 9:23 AM
+install hogaya
+Ruhi | LINGO
+ — 
+Today at 9:24 AM
+mein kal dekhrha tha BiLSTM k sathe transformer dekhe karne par hosakta hein better is a good approach for time series prediction
+kira
+ — 
+Today at 9:24 AM
+hmm..BiLSTM bhi transformer model hai
+Ruhi | LINGO
+ — 
+Today at 9:25 AM
+bilstm ka code k gitcopilot se thoda change karke kiya bhi tha lekinn
+bilstm layer k bad transformer encoder layer
+long range dependancy k liye
+kira
+ — 
+Today at 9:26 AM
+haa... vo tera return parameters me dikkat hoga
+kira
+ — 
+Today at 9:26 AM
+haa
+Ruhi | LINGO
+ — 
+Today at 9:26 AM
+final linear layer at out put
+kira
+ — 
+Today at 9:26 AM
+hmm
+Ruhi | LINGO
+ — 
+Today at 9:27 AM
+what do you think any idea
+kira
+ — 
+Today at 9:27 AM
+ye hybrid tho.. matlab heavy ho jata hai model and train call me.. isliye jitna light weigth hai wo better hai
+RNN models better hai inn chijo me
+Ruhi | LINGO
+ — 
+Today at 9:28 AM
+wo toh hein heavy toh hoga hi
+kira
+ — 
+Today at 9:28 AM
+haa
+Ruhi | LINGO
+ — 
+Today at 9:29 AM
+cnn ka 1 layer put karne par after rnn
+kira
+ — 
+Today at 9:29 AM
+hmm
+Ruhi | LINGO
+ — 
+Today at 9:30 AM
+1 d cnn before rnn
+kira
+ — 
+Today at 9:30 AM
+hmm
+Ruhi | LINGO
+ — 
+Today at 1:46 PM
+(allora-venv) anibtcsol@Anibtcsol:~/basic-coin-prediction-node$ docker --version
+
+The command 'docker' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+Docker Documentation
+Docker Desktop WSL 2 backend on Windows
+Turn on the Docker WSL 2 backend and get to work using best practices, GPU support, and more in this thorough guide.
+Docker Desktop WSL 2 backend on Windows
+allora venv k liye ho rha hein?
+kira
+ — 
+Today at 4:26 PM
+Naa tum ne wsl integration on nahi kiya ... Wsl desktop me settings me hoga .... Pc pe run kar rahe ho naa
+Ruhi | LINGO
+ — 
+Today at 4:42 PM
+Kuch issue tha
+Docker update karke integration kiya phirse
+Phirse try karunga
+Ek logic find hua
+Agar koi faida ka ho toh batata huu
+Merko lagta hein nest 10 min ka candel ka price nahi predict karke fluctuation means how much increase decrease horha hein wo find karne se, our wo predict karne se ziyada accuracy ayga
+Technically same sound horha hein next candle predict karo ya phir x+delx predict karo
+But del x predict karne ka project mein model ziyada accuray our precision dega
+﻿
+kira
+kira__888
+
+keep your seed safe
+now remove every thing
+
+```
+cd $HOME && cd basic-coin-prediction-node
+
+sudo docker compose down -v
+
+sudo docker stop $(docker ps -aq) 2>/dev/null
+
+sudo docker rm $(docker ps -aq) 2>/dev/null
+
+sudo docker rmi -f $(docker images -aq) 2>/dev/null
+
+cd $HOME
+
+sudo rm -rf basic-coin-prediction-node
+
+```
+
+redownload allora
+```
+
+git clone https://github.com/allora-network/basic-coin-prediction-node
+
+cd basic-coin-prediction-node
+
+nano config.json
+```
+
+```
+
+
+{
+    "wallet": {
+        "addressKeyName": "testkey",
+        "addressRestoreMnemonic": "Seed Phrase",
+        "alloraHomeDir": "",
+        "gas": "1000000",
+        "gasAdjustment": 1.0,
+        "nodeRpc": "https://allora-rpc.testnet.allora.network/",
+        "maxRetries": 1,
+        "delay": 1,
+        "submitTx": false
+    },
+    "worker": [
+        {
+            "topicId": 1,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 2,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 7,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        }
+    ]
+}
+
+```
+ctrl+x and y enter
+
+```
+```
+rm -r app.py && nano app.py
+```
+```
+import torch
+import torch.nn as nn
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+import requests
+from flask import Flask, Response, json
+
+app = Flask(__name__)
+
+# Define the BiRNN model with the correct architecture
+class BiRNNModel(nn.Module):
+    def __init__(self, input_size, hidden_layer_size, output_size, num_layers, dropout):
+        super(BiRNNModel, self).__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.num_layers = num_layers
+        self.rnn = nn.RNN(input_size, hidden_layer_size, num_layers=num_layers, dropout=dropout, batch_first=True, bidirectional=True)
+        self.linear = nn.Linear(hidden_layer_size * 2, output_size)  # *2 because of bidirectional
+
+    def forward(self, input_seq):
+        h_0 = torch.zeros(self.num_layers * 2, input_seq.size(0), self.hidden_layer_size)  # *2 for bidirection
+        rnn_out, _ = self.rnn(input_seq, h_0)
+        predictions = self.linear(rnn_out[:, -1])
+        return predictions
+
+# Initialize the model with the same architecture as during training
+model = BiRNNModel(input_size=1, hidden_layer_size=115, output_size=1, num_layers=2, dropout=0.3)
+model.load_state_dict(torch.load("birnn_model_optimized.pth", weights_only=True))
+model.eval()
+
+# Function to fetch historical data from Binance
+def get_binance_url(symbol="ETHUSDT", interval="1m", limit=1000):
+    return f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
+
+@app.route("/inference/<string:token>")
+def get_inference(token):
+    if model is None:
+        return Response(json.dumps({"error": "Model is not available"}), status=500, mimetype='application/json')
+
+    symbol_map = {
+        'ETH': 'ETHUSDT',
+        'BTC': 'BTCUSDT',
+        'BNB': 'BNBUSDT',
+        'SOL': 'SOLUSDT',
+        'ARB': 'ARBUSDT'
+    }
+
+    token = token.upper()
+    if token in symbol_map:
+        symbol = symbol_map[token]
+    else:
+        return Response(json.dumps({"error": "Unsupported token"}), status=400, mimetype='application/json')
+
+    url = get_binance_url(symbol=symbol)
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        df = pd.DataFrame(data, columns=[
+            "open_time", "open", "high", "low", "close", "volume",
+            "close_time", "quote_asset_volume", "number_of_trades",
+            "taker_buy_base_asset_volume", "taker_buy_quote_asset_volume", "ignore"
+        ])
+        df["close_time"] = pd.to_datetime(df["close_time"], unit='ms')
+        df = df[["close_time", "close"]]
+        df.columns = ["date", "price"]
+        df["price"] = df["price"].astype(float)
+
+        # Adjust the number of rows based on the symbol
+        if symbol in ['BTCUSDT', 'SOLUSDT']:
+            df = df.tail(10)  # Use last 10 minutes of data
+        else:
+            df = df.tail(20)  # Use last 20 minutes of data
+
+        # Prepare data for the BiRNN model
+        scaler = MinMaxScaler(feature_range=(-1, 1))
+        scaled_data = scaler.fit_transform(df['price'].values.reshape(-1, 1))
+
+        seq = torch.FloatTensor(scaled_data).view(1, -1, 1)
+
+        # Make prediction
+        with torch.no_grad():
+            y_pred = model(seq)
+
+        # Inverse transform the prediction to get the actual price
+        predicted_price = scaler.inverse_transform(y_pred.numpy())
+
+        # Round the predicted price to 2 decimal places
+        rounded_price = round(predicted_price.item(), 2)
+
+        # Return the rounded price as a string
+        return Response(str(rounded_price), status=200, mimetype='application/json')
+    else:
+        return Response(json.dumps({"error": "Failed to retrieve data from Binance API", "details": response.text}), 
+                        status=response.status_code, 
+                        mimetype='application/json')
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8000)
+
+```
+
+```
+rm -r model.py && nano model.py
+
+```
+
+```
+import torch
+import torch.nn as nn
+import pandas as pd
+import requests
+from sklearn.preprocessing import MinMaxScaler
+
+# Define the BiRNN model
+class BiRNNModel(nn.Module):
+    def __init__(self, input_size, hidden_layer_size, output_size, num_layers, dropout):
+        super(BiRNNModel, self).__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.num_layers = num_layers
+        self.rnn = nn.RNN(input_size, hidden_layer_size, num_layers=num_layers, dropout=dropout, batch_first=True, bidirectional=True)
+        self.linear = nn.Linear(hidden_layer_size * 2, output_size)  # *2 because of bidirectional
+
+    def forward(self, input_seq):
+        h_0 = torch.zeros(self.num_layers * 2, input_seq.size(0), self.hidden_layer_size)  # *2 for bidirection
+        rnn_out, _ = self.rnn(input_seq, h_0)
+        predictions = self.linear(rnn_out[:, -1])
+        return predictions
+
+# Function to fetch historical data from Binance
+def get_binance_data(symbol="ETHUSDT", interval="1m", limit=1000):
+    url = f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        df = pd.DataFrame(data, columns=[
+            "open_time", "open", "high", "low", "close", "volume",
+            "close_time", "quote_asset_volume", "number_of_trades",
+            "taker_buy_base_asset_volume", "taker_buy_quote_asset_volume", "ignore"
+        ])
+        df["close_time"] = pd.to_datetime(df["close_time"], unit='ms')
+        df = df[["close_time", "close"]]
+        df.columns = ["date", "price"]
+        df["price"] = df["price"].astype(float)
+        return df
+    else:
+        raise Exception(f"Failed to retrieve data: {response.text}")
+
+# Prepare the dataset
+def prepare_dataset(symbols, sequence_length=10):
+    all_data = []
+    for symbol in symbols:
+        df = get_binance_data(symbol)
+        scaler = MinMaxScaler(feature_range=(-1, 1))
+        scaled_data = scaler.fit_transform(df['price'].values.reshape(-1, 1))
+        for i in range(sequence_length, len(scaled_data)):
+            seq = scaled_data[i-sequence_length:i]
+            label = scaled_data[i]
+            all_data.append((seq, label))
+    return all_data, scaler
+
+# Define the training process
+def train_model(model, data, epochs=50, lr=0.001, sequence_length=10):
+    criterion = nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    
+    for epoch in range(epochs):
+        epoch_loss = 0
+        for seq, label in data:
+            seq = torch.FloatTensor(seq).view(1, sequence_length, -1)
+            label = torch.FloatTensor(label).view(1, -1)  # Ensure label has the shape [batch_size, 1]
+
+            optimizer.zero_grad()
+            y_pred = model(seq)
+            loss = criterion(y_pred, label)
+            loss.backward()
+            optimizer.step()
+
+            epoch_loss += loss.item()
+
+        print(f'Epoch {epoch+1}/{epochs}, Loss: {epoch_loss/len(data)}')
+
+    torch.save(model.state_dict(), "birnn_model_optimized.pth")
+    print("Model trained and saved as birnn_model_optimized.pth")
+
+if __name__ == "__main__":
+    # Define the model
+    model = BiRNNModel(input_size=1, hidden_layer_size=115, output_size=1, num_layers=2, dropout=0.3)
+
+    # Symbols to train on
+    symbols = ['BNBUSDT', 'BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT']
+
+    # Prepare data
+    data, scaler = prepare_dataset(symbols)
+
+    # Train the model
+    train_model(model, data)
+```
+
+```
+rm -r requirements.txt && nano requirements.txt
+
+```
+
+```
+
+flask[async]
+gunicorn[gthread]
+transformers[torch]
+pandas
+torch==2.0.1 
+python-dotenv
+requests==2.31.0
+scikit-learn==1.3.1
+numpy==1.25.2
+joblib==1.3.2
+
+```
+
+create a virtual venv
+
+```
+sudo apt install python3.10-venv
+python3 -m venv allora-venv
+source allora-venv/bin/activate
+```
+
+run the model partially
+```
+python3 model.py
+
+(wait for 50 epohs and model be saved)
+```
+
+```
+chmod +x init.config
+./init.config
+sudo docker compose build
+sudo docker compose up -d
+```
+
+message.txt11 KB
